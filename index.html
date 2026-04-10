@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>恋爱人格测试 | 你是什么恋爱体质？</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💔</text></svg>">
+</head>
+<body>
+
+  <!-- 首页 -->
+  <div id="page-home" class="page active">
+    <div class="home-content">
+      <div class="heart-rain" id="heartRain"></div>
+      <h1 class="title">
+        <span class="title-line1">MBTI测过了？</span>
+        <span class="title-line2">那你知道自己是什么<span class="highlight">恋爱体质</span>吗？</span>
+      </h1>
+      <p class="subtitle">18道题，测出你真实的恋爱人格</p>
+      <p class="warning">⚠️ 仅供娱乐，测完别分手</p>
+      <button class="btn-start" onclick="startQuiz()">
+        <span>开始测试</span>
+        <span class="btn-arrow">→</span>
+      </button>
+      <p class="footer-note">已有 <span class="fake-count">1,337,420</span> 人测试</p>
+    </div>
+  </div>
+
+  <!-- 答题页 -->
+  <div id="page-quiz" class="page">
+    <div class="quiz-header">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span class="progress-text" id="progressText">0 / 18</span>
+    </div>
+    <div class="quiz-content">
+      <div class="question-number" id="questionNumber">Q1</div>
+      <h2 class="question-text" id="questionText"></h2>
+      <div class="options" id="optionsContainer"></div>
+    </div>
+  </div>
+
+  <!-- 结果页 -->
+  <div id="page-result" class="page">
+    <div class="result-content">
+      <div class="result-type-badge" id="resultBadge"></div>
+      <h2 class="result-type" id="resultType"></h2>
+      <div class="result-match">
+        <span>匹配度</span>
+        <span class="match-percent" id="matchPercent">0%</span>
+      </div>
+      <div class="result-remark" id="resultRemark"></div>
+
+      <div class="section">
+        <h3 class="section-title">💗 人格解读</h3>
+        <p class="result-desc" id="resultDesc"></p>
+        <p class="result-tip" id="resultTip"></p>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">📊 八维度评分</h3>
+        <canvas id="radarChart" width="300" height="300"></canvas>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">📋 详细维度</h3>
+        <div class="dimension-bars" id="dimensionBars"></div>
+      </div>
+
+      <div class="share-section">
+        <button class="btn-share" onclick="copyShareLink()">
+          📋 复制结果链接分享给朋友
+        </button>
+        <p class="share-hint" id="shareHint"></p>
+      </div>
+
+      <div class="section disclaimer">
+        <p>⚠️ 本测试仅供娱乐，别拿它当分手依据、恋爱圣经或人生指导。</p>
+        <p>如因测试结果导致分手、复合、闪婚、出家等后果，本站概不负责。</p>
+      </div>
+
+      <button class="btn-restart" onclick="restartQuiz()">重新测试</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
