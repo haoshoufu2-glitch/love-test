@@ -1,5 +1,4 @@
 /* ===== 暗色搞怪风格 ===== */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
 
 * {
   margin: 0;
@@ -23,7 +22,7 @@
 }
 
 body {
-  font-family: 'Noto Sans SC', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
